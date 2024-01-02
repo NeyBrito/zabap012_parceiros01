@@ -1,0 +1,12 @@
+<mvc:View 
+    xmlns:statusindicator="sap.suite.ui.commons.statusindicator" 
+    controllerName="z012.parceiros.controller.Parceiro"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:f="sap.f.semantic"
+    xmlns="sap.m">
+    <f:SemanticPage>
+        <f:titleHeading title="Detalhes Parceiros">
+            <Text text="{PartnerName1}"/>
+        </f:titleHeading>
+    </f:SemanticPage>
+</mvc:View>
