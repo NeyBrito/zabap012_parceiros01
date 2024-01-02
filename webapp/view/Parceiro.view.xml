@@ -5,9 +5,8 @@
     xmlns:f="sap.f.semantic"
     xmlns:form="sap.ui.layout.form"
     xmlns="sap.m"
-    xmlns:layout="sap.ui.layout"
-    xmlns:core="sap.ui.core">
-    <f:SemanticPage id="_IDGenSemanticPage1">
+    xmlns:layout="sap.ui.layout">
+    <f:SemanticPage id="_IDGenSemanticPage1" showFooter="true">
         <f:titleHeading title="Detalhes Parceiros">
             <Text text="{PartnerName1}" />
         </f:titleHeading>
@@ -49,10 +48,12 @@
                         <Input id="name2" value="{PartnerName2}" editable="{editavel>/habilitado}" />
 
                         <Label text="Termos de Pesquisa 1" />
-                        <Input id="pesquisa1" value="{SearchTerm1}" editable="{editavel>/habilitado}" />
+                        <Input id="pesquisa1" value="{SearchTerm1}"
+                            editable="{editavel>/habilitado}" />
 
                         <Label text="Termos de Pesquisa 2" />
-                        <Input id="pesquisa2" value="{SearchTerm2}" editable="{editavel>/habilitado}" />
+                        <Input id="pesquisa2" value="{SearchTerm2}"
+                            editable="{editavel>/habilitado}" />
 
                     </form:content>
                 </form:SimpleForm>
@@ -80,7 +81,7 @@
                         <Input id="rua" value="{Street}" editable="{editavel>/habilitado}" />
 
                         <Label text="Numero" />
-                        <Input id="Numero" value="{HouseNumber}" editable="{editavel>/habilitado}"  />
+                        <Input id="Numero" value="{HouseNumber}" editable="{editavel>/habilitado}" />
 
                         <Label text="Bairro" />
                         <Input id="Bairro" value="{District}" editable="{editavel>/habilitado}" />
@@ -101,5 +102,15 @@
                 </form:SimpleForm>
             </layout:VerticalLayout>
         </f:content>
+
+        <f:footerMainAction>
+            <f:FooterMainAction text="Editar" press="aoEditar" visible="{visibilidade>/visualizacao}"/>
+        </f:footerMainAction>
+
+        <f:footerCustomActions>
+            <Button text="Salvar"   type="Accept" visible="{visibilidade>/edicao}" />
+            <Button text="Cancelar" type="Reject" visible="{visibilidade>/edicao}" />
+        </f:footerCustomActions>
+
     </f:SemanticPage>
 </mvc:View>
