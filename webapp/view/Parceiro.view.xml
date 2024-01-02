@@ -1,22 +1,105 @@
-<mvc:View 
-    xmlns:statusindicator="sap.suite.ui.commons.statusindicator" 
+<mvc:View
+    xmlns:statusindicator="sap.suite.ui.commons.statusindicator"
     controllerName="z012.parceiros.controller.Parceiro"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns:f="sap.f.semantic"
+    xmlns:form="sap.ui.layout.form"
     xmlns="sap.m"
     xmlns:layout="sap.ui.layout"
-    >
-    <f:SemanticPage>
+    xmlns:core="sap.ui.core">
+    <f:SemanticPage id="_IDGenSemanticPage1">
         <f:titleHeading title="Detalhes Parceiros">
-            <Text text="{PartnerName1}"/>
+            <Text text="{PartnerName1}" />
         </f:titleHeading>
 
         <f:headerContent>
             <layout:HorizontalLayout allowWrapping="true">
-				<layout:VerticalLayout class="sapUiMediumMarginEnd">
-					<ObjectAttribute title="Tipo de Parceiro" text="{PartnerType}"/>
-				</layout:VerticalLayout>
-			</layout:HorizontalLayout>
+                <layout:VerticalLayout class="sapUiMediumMarginEnd">
+                    <ObjectAttribute title="Tipo de Parceiro" text="{PartnerType}" />
+                    <ObjectAttribute title="ID" text="{PartnerId}" />
+                </layout:VerticalLayout>
+            </layout:HorizontalLayout>
         </f:headerContent>
+
+        <f:content>
+            <layout:HorizontalLayout>
+                <form:SimpleForm id="_IDGenSimpleForm1"
+                    editable="true"
+                    layout="ResponsiveGridLayout"
+                    title="Detalhes"
+                    labelSpanXL="3"
+                    labelSpanL="3"
+                    labelSpanM="3"
+                    labelSpanS="12"
+                    adjustLabelSpan="false"
+                    emptySpanXL="4"
+                    emptySpanL="4"
+                    emptySpanM="4"
+                    emptySpanS="0"
+                    columnsXL="1"
+                    columnsL="1"
+                    columnsM="1"
+                    singleContainerFullSize="false"
+                >
+                    <form:content>
+                        <Label text="Name 1" />
+                        <Input id="name" value="{PartnerName1}" />
+
+                        <Label text="Name 2" />
+                        <Input id="name2" value="{PartnerName2}" />
+
+                        <Label text="Termos de Pesquisa 1" />
+                        <Input id="pesquisa1" value="{SearchTerm1}" />
+
+                        <Label text="Termos de Pesquisa 2" />
+                        <Input id="pesquisa2" value="{SearchTerm2}" />
+
+                    </form:content>
+                </form:SimpleForm>
+
+                <form:SimpleForm id="_IDGenSimpleForm2"
+                    editable="true"
+                    layout="ResponsiveGridLayout"
+                    title="Endereço"
+                    labelSpanXL="3"
+                    labelSpanL="3"
+                    labelSpanM="3"
+                    labelSpanS="12"
+                    adjustLabelSpan="false"
+                    emptySpanXL="4"
+                    emptySpanL="4"
+                    emptySpanM="4"
+                    emptySpanS="0"
+                    columnsXL="1"
+                    columnsL="1"
+                    columnsM="1"
+                    singleContainerFullSize="false"
+                >
+                    <form:content>
+                        <Label text="Rua" />
+                        <Input id="rua" value="{Street}" />
+
+                        <Label text="Numero" />
+                        <Input id="Numero" value="{HouseNumber}" />
+
+                        <Label text="Bairro" />
+                        <Input id="Bairro" value="{District}" />
+
+                        <Label text="Cidade" />
+                        <Input id="Cidade" value="{City}" />
+
+                        <Label text="Estado" />
+                        <Input id="Estado" value="{Region}" />
+
+                        <Label text="País" />
+                        <Input id="Country" value="{Country}" />
+
+                        <Label text="CEP" />
+                        <Input id="CEP" value="{Zipcode}" />
+
+                    </form:content>
+                </form:SimpleForm>
+            </layout:HorizontalLayout>
+        </f:content>
     </f:SemanticPage>
 </mvc:View>
