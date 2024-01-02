@@ -1,10 +1,11 @@
 sap.ui.define([
-    "sap/ui/core/mvc/Controller"
+    "sap/ui/core/mvc/Controller",
+    "sap/ui/model/json/JSONModel"
 ],
     /**
      * @param {typeof sap.ui.core.mvc.Controller} Controller
      */
-    function (Controller) {
+    function (Controller, JSONModel) {
         "use strict";
 
         return Controller.extend("z012.parceiros.controller.Parceiro", {
@@ -16,6 +17,14 @@ sap.ui.define([
                 
                 let oRotaDesejada = oRouter.getRoute("RouteParceiro");
                 oRotaDesejada.attachPatternMatched(this.rotaDetalhe, this);
+
+                //Gera modelo para controlar a edição dos campos imput
+                let oModel = new JSONModel();
+                //Declara uma propriedade "habilitado e marca como false"
+                oModel.setProperty("/habilitado", false) 
+                //Seta o modelo na View
+                this.getView().setModel(oModel, "editavel");
+
             },
 
             rotaDetalhe: function(oEvent){

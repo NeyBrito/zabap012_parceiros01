@@ -22,7 +22,7 @@
         </f:headerContent>
 
         <f:content>
-            <layout:HorizontalLayout>
+            <layout:VerticalLayout>
                 <form:SimpleForm id="_IDGenSimpleForm1"
                     editable="true"
                     layout="ResponsiveGridLayout"
@@ -43,16 +43,16 @@
                 >
                     <form:content>
                         <Label text="Name 1" />
-                        <Input id="name" value="{PartnerName1}" />
+                        <Input id="name" value="{PartnerName1}" editable="{editavel>/habilitado}" />
 
                         <Label text="Name 2" />
-                        <Input id="name2" value="{PartnerName2}" />
+                        <Input id="name2" value="{PartnerName2}" editable="{editavel>/habilitado}" />
 
                         <Label text="Termos de Pesquisa 1" />
-                        <Input id="pesquisa1" value="{SearchTerm1}" />
+                        <Input id="pesquisa1" value="{SearchTerm1}" editable="{editavel>/habilitado}" />
 
                         <Label text="Termos de Pesquisa 2" />
-                        <Input id="pesquisa2" value="{SearchTerm2}" />
+                        <Input id="pesquisa2" value="{SearchTerm2}" editable="{editavel>/habilitado}" />
 
                     </form:content>
                 </form:SimpleForm>
@@ -77,29 +77,29 @@
                 >
                     <form:content>
                         <Label text="Rua" />
-                        <Input id="rua" value="{Street}" />
+                        <Input id="rua" value="{Street}" editable="{editavel>/habilitado}" />
 
                         <Label text="Numero" />
-                        <Input id="Numero" value="{HouseNumber}" />
+                        <Input id="Numero" value="{HouseNumber}" editable="{editavel>/habilitado}"  />
 
                         <Label text="Bairro" />
-                        <Input id="Bairro" value="{District}" />
+                        <Input id="Bairro" value="{District}" editable="{editavel>/habilitado}" />
 
                         <Label text="Cidade" />
-                        <Input id="Cidade" value="{City}" />
+                        <Input id="Cidade" value="{City}" editable="{editavel>/habilitado}" />
 
                         <Label text="Estado" />
-                        <Input id="Estado" value="{Region}" />
+                        <Input id="Estado" value="{Region}" editable="{editavel>/habilitado}" />
 
                         <Label text="País" />
-                        <Input id="Country" value="{Country}" />
+                        <Input id="Country" value="{Country}" editable="{editavel>/habilitado}" />
 
                         <Label text="CEP" />
-                        <Input id="CEP" value="{Zipcode}" />
+                        <Input id="CEP" value="{Zipcode}" editable="{editavel>/habilitado}" />
 
                     </form:content>
                 </form:SimpleForm>
-            </layout:HorizontalLayout>
+            </layout:VerticalLayout>
         </f:content>
     </f:SemanticPage>
 </mvc:View>
