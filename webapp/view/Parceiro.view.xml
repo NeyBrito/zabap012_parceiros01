@@ -3,10 +3,20 @@
     controllerName="z012.parceiros.controller.Parceiro"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns:f="sap.f.semantic"
-    xmlns="sap.m">
+    xmlns="sap.m"
+    xmlns:layout="sap.ui.layout"
+    >
     <f:SemanticPage>
         <f:titleHeading title="Detalhes Parceiros">
             <Text text="{PartnerName1}"/>
         </f:titleHeading>
+
+        <f:headerContent>
+            <layout:HorizontalLayout allowWrapping="true">
+				<layout:VerticalLayout class="sapUiMediumMarginEnd">
+					<ObjectAttribute title="Tipo de Parceiro" text="{PartnerType}"/>
+				</layout:VerticalLayout>
+			</layout:HorizontalLayout>
+        </f:headerContent>
     </f:SemanticPage>
 </mvc:View>
