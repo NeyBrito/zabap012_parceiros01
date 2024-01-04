@@ -1,7 +1,7 @@
 <mvc:View controllerName="z012.parceiros.controller.ListaBPs"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
+    <Page id="page" >
         <Table id="_IDGenTable1" items="{/Parceiros}" growing="true" growingScrollToLoad="false">
             <headerToolbar> <!-- declaração de agregação de cabeçalho-->
                 <OverflowToolbar> <!-- classe mais responsiva que a toolBar-->

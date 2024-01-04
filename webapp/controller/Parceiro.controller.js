@@ -110,7 +110,18 @@ sap.ui.define(
         oModel.update(sCaminho, oNovasInformacoes, {
             // @ts-ignore
             success: (oResult) => {
+              MessageBox.success("Dados alterados com sucesso!", {
+                  title: "Sucesso",                                    // default
+                  onClose: null,                                       // default
+                  styleClass: "",                                      // default
+                  actions: sap.m.MessageBox.Action.OK,                 // default
+                  emphasizedAction: sap.m.MessageBox.Action.OK,        // default
+                  initialFocus: null,                                  // default
+                  textDirection: sap.ui.core.TextDirection.Inherit     // default
+              });
 
+              this._configuraVisibilidade(false, true);
+              this._configuraEdicao(false);
             },
             
             error: (oError) => {
@@ -122,6 +133,20 @@ sap.ui.define(
         });
 
       },
+      onCancelar: function(oEvent){
+        //pega caminho
+        let sCaminho = this.getView().getBindingContext().getPath();
+
+        //Acessar o modelo
+        let oModel = this.getOwnerComponent().getModel();
+
+        //Chama o metodo resetChanges.
+        oModel.resetChanges(new Array(sCaminho));
+
+        this._configuraVisibilidade(false, true); //Tirar a edição da tela 
+        this._configuraEdicao(false);             //Voltar o botão editar
+      },
+
 
       //FUNÇÕES INTERNAS
       _configuraEdicao: function (bValor) {

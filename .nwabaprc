@@ -1,0 +1,12 @@
+{
+    "base": "./dist",
+    "conn_usestrictssl" : false,
+    "conn_server": "https://vm63.4hub.cloud:44363/",
+    "conn_client" : "120",
+    "conn_user": "ABAP_12",
+    "conn_password": "Rx#wkj3=9#",
+    "abap_package": "ZFIORI12",
+    "abap_transport": "S4HK902624",
+    "abap_bsp": "Z012_BPS",
+    "abap_bsp_text": "UI5 Deployment Demo"
+}

@@ -1,0 +1,38 @@
+<mvc:View controllerName="z012.parceiros.controller.ListaBPs"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <Table id="_IDGenTable1" items="{/Parceiros}" growing="true" growingScrollToLoad="false">
+            <headerToolbar> <!-- declaração de agregação de cabeçalho-->
+                <OverflowToolbar> <!-- classe mais responsiva que a toolBar-->
+                    <Title text="Parceiros"></Title>
+                </OverflowToolbar>
+            </headerToolbar>
+            <columns>
+                <Column >
+                    <!-- omitindo agregação  pq é default-->
+                <Text text="Identificação"></Text>
+                </Column>
+                <Column >
+                    <Text text="Tipo"></Text>
+                </Column>
+                <Column >
+                    <Text text="País"></Text>
+                </Column>                
+            </columns>
+
+            <items>
+                <ColumnListItem type="Navigation" press="onPress">
+                    <!-- omitindo agregação cell pq é default-->
+                    <ObjectIdentifier
+                        text="{PartnerName1}"
+                        title="{PartnerId}"/>
+                    <Text text="{PartnerType}"/> <!-- Tipo-->
+                    <Text text="{City}"/> <!-- País-->
+
+                </ColumnListItem>
+            </items>
+
+        </Table>
+    </Page>
+</mvc:View>

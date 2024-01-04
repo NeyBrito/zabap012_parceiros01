@@ -1,0 +1,2 @@
+sap.ui.define(["z012/parceiros/controller/ListaBPs.controller"],function(t){"use strict";QUnit.module("ListaBPs Controller");QUnit.test("I should test the ListaBPs controller",function(o){var n=new t;n.onInit();o.ok(n)})});
+//# sourceMappingURL=ListaBPs.controller.js.map

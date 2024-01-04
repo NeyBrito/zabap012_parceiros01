@@ -1,0 +1,116 @@
+<mvc:View
+    xmlns:statusindicator="sap.suite.ui.commons.statusindicator"
+    controllerName="z012.parceiros.controller.Parceiro"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:f="sap.f.semantic"
+    xmlns:form="sap.ui.layout.form"
+    xmlns="sap.m"
+    xmlns:layout="sap.ui.layout">
+    <f:SemanticPage id="_IDGenSemanticPage1" showFooter="true">
+        <f:titleHeading title="Detalhes Parceiros">
+            <Text text="{PartnerName1}" />
+        </f:titleHeading>
+
+        <f:headerContent>
+            <layout:HorizontalLayout allowWrapping="true">
+                <layout:VerticalLayout class="sapUiMediumMarginEnd">
+                    <ObjectAttribute title="Tipo de Parceiro" text="{PartnerType}" />
+                    <ObjectAttribute title="ID" text="{PartnerId}" />
+                </layout:VerticalLayout>
+            </layout:HorizontalLayout>
+        </f:headerContent>
+
+        <f:content>
+            <layout:VerticalLayout>
+                <form:SimpleForm id="_IDGenSimpleForm1"
+                    editable="true"
+                    layout="ResponsiveGridLayout"
+                    title="Detalhes"
+                    labelSpanXL="3"
+                    labelSpanL="3"
+                    labelSpanM="3"
+                    labelSpanS="12"
+                    adjustLabelSpan="false"
+                    emptySpanXL="4"
+                    emptySpanL="4"
+                    emptySpanM="4"
+                    emptySpanS="0"
+                    columnsXL="1"
+                    columnsL="1"
+                    columnsM="1"
+                    singleContainerFullSize="false"
+                >
+                    <form:content>
+                        <Label text="Name 1" />
+                        <Input id="name" value="{PartnerName1}" editable="{editavel>/habilitado}" />
+
+                        <Label text="Name 2" />
+                        <Input id="name2" value="{PartnerName2}" editable="{editavel>/habilitado}" />
+
+                        <Label text="Termos de Pesquisa 1" />
+                        <Input id="pesquisa1" value="{SearchTerm1}"
+                            editable="{editavel>/habilitado}" />
+
+                        <Label text="Termos de Pesquisa 2" />
+                        <Input id="pesquisa2" value="{SearchTerm2}"
+                            editable="{editavel>/habilitado}" />
+
+                    </form:content>
+                </form:SimpleForm>
+
+                <form:SimpleForm id="_IDGenSimpleForm2"
+                    editable="true"
+                    layout="ResponsiveGridLayout"
+                    title="Endereço"
+                    labelSpanXL="3"
+                    labelSpanL="3"
+                    labelSpanM="3"
+                    labelSpanS="12"
+                    adjustLabelSpan="false"
+                    emptySpanXL="4"
+                    emptySpanL="4"
+                    emptySpanM="4"
+                    emptySpanS="0"
+                    columnsXL="1"
+                    columnsL="1"
+                    columnsM="1"
+                    singleContainerFullSize="false"
+                >
+                    <form:content>
+                        <Label text="Rua" />
+                        <Input id="rua" value="{Street}" editable="{editavel>/habilitado}" />
+
+                        <Label text="Numero" />
+                        <Input id="Numero" value="{HouseNumber}" editable="{editavel>/habilitado}" />
+
+                        <Label text="Bairro" />
+                        <Input id="Bairro" value="{District}" editable="{editavel>/habilitado}" />
+
+                        <Label text="Cidade" />
+                        <Input id="Cidade" value="{City}" editable="{editavel>/habilitado}" />
+
+                        <Label text="Estado" />
+                        <Input id="Estado" value="{Region}" editable="{editavel>/habilitado}" />
+
+                        <Label text="País" />
+                        <Input id="Country" value="{Country}" editable="{editavel>/habilitado}" />
+
+                        <Label text="CEP" />
+                        <Input id="CEP" value="{Zipcode}" editable="{editavel>/habilitado}" />
+
+                    </form:content>
+                </form:SimpleForm>
+            </layout:VerticalLayout>
+        </f:content>
+
+        <f:footerMainAction>
+            <f:FooterMainAction text="Editar" press="aoEditar" visible="{visibilidade>/visualizacao}"/>
+        </f:footerMainAction>
+
+        <f:footerCustomActions>
+            <Button text="Salvar"   type="Accept " visible="{visibilidade>/edicao}" press="aoSalvar" />
+            <Button text="Cancelar" type="Reject" visible="{visibilidade>/edicao}" />
+        </f:footerCustomActions>
+
+    </f:SemanticPage>
+</mvc:View>
