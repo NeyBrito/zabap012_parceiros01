@@ -7,7 +7,7 @@
 |**Generation Platform**<br>Visual Studio Code|
 |**Template Used**<br>simple|
 |**Service Type**<br>SAP System (ABAP On Premise)|
-|**Service URL**<br>https://vm63.4hub.cloud:44363/sap/opu/odata/sap/ZABAP012_BP_SRV
+|**Service URL**<br>https://urlservico:porta/sap/opu/odata/sap/ZABAP012_BP_SRV
 |**Module Name**<br>parceiros|
 |**Application Title**<br>App Title|
 |**Namespace**<br>z012|
